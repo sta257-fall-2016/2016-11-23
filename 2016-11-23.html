@@ -89,7 +89,7 @@
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
       <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
       <p data-config-presenter><!-- populated from slide_config.json --></p>
-            <p style="margin-top: 6px; margin-left: -2px;">Last edited: 2016-11-22 13:26</p>
+            <p style="margin-top: 6px; margin-left: -2px;">Last edited: 2016-11-23 19:27</p>
           </hgroup>
   </slide>
 
@@ -126,70 +126,15 @@
 
 <p>Theorem (continuous version): \(X_1,\ldots,X_n\) have joint density \(f(x_1,\ldots,x_n)\) and \(Y = g(X_1,\ldots,X_n)\). Then: \[E(Y) = \int\ldots\int g(x_1,\ldots,x_n) f(x_1,\ldots,x_n)\,dx_1\ldots\,dx_n\]</p>
 
-</article></slide><slide class=''><hgroup><h2>examples</h2></hgroup><article  id="examples">
+</article></slide><slide class=''><hgroup><h2>examples</h2></hgroup><article  id="examples" class="smaller">
 
 <p>Suppose \(X_1 \perp X_2.\) Consider \(E(X_1\cdot X_2)\)&#8230;</p>
 
 <p>Exercise: \(X_1 \perp X_2.\) Consider \({E\!\left(g(X_1)\, h(X_2)\right)}\)</p>
 
-<p>Now suppose \(X_1,\ldots,X_n\) are i.i.d. with \(E(X_i) = \mu.\) Consider: \[E\left(\overline{X}\right) = E\left(\frac{X_1 + \cdots + X_n}{n}\right)...\]</p>
+<p>Now suppose \(X_1,\ldots,X_n\) are i.i.d. with \(E(X_i) = \mu.\) Consider: \[E\left(\overline{X}\right) = E\left(\frac{X_1 + \cdots + X_n}{n}\right)=\mu\] <strong>Note added after class: Try the proof with \(n=2\). Notice that there was nothing special about \(n\). Also notice that the only requirement for \(E\left(\overline{X}\right) = \mu\) is just that \(E(X_i) = \mu\). Try for \(n=2\) just with a general joint distribution and no independence and not the same distribution for \(X_1\) and \(X_2\) and only \(E(X_1)=E(X_2) = \mu\)</strong></p>
 
-<p>\(X\sim \text{NegBin}(r,p)\)&#8230;</p>
-
-</article></slide><slide class=''><hgroup><h2>putting a number on variation</h2></hgroup><article  id="putting-a-number-on-variation" class="build">
-
-<p>Expected value is a measure of &quot;location&quot;, but random variables with the same &quot;location&quot; can be quite different.</p>
-
-<p>Consider the coin tossing game with \(E(Y)=0\): \[P(Y=y) = \begin{cases}
-0.5 &amp;: y=100\\
-0.5 &amp;: y=-100
-\end{cases}\]</p>
-
-<p>One thing leads to another. Family trees are compared and contrasted, and after more than a few <em>schnapps</em> things get interesting: \[P(Y_2=y) = \begin{cases}
-0.5 &amp;: y=1000\\
-0.5 &amp;: y=-1000
-\end{cases}\] Still, \(E(Y_2)=0\). But the values of \(Y_2\) are more spread out.</p>
-
-</article></slide><slide class=''><hgroup><h2>variance</h2></hgroup><article  id="variance">
-
-<p>One way to measure spread is to use the <em>variance</em> of \(X\), defined as: \({\text{Var}\!\left(X\right)}=E\left[(X-E(X))^2\right].\)</p>
-
-<p>This is a use of \(E(g(X))\) with \(g(x) = (x-E(X))^2\).</p>
-
-<p>Very useful: \[\begin{align*}
-{\text{Var}\!\left(X\right)} &amp;= {E\!\left(X^2 - 2XE(X) + E(X)^2\right)} \\
-&amp;= {E\!\left(X^2\right)} - 2E(X)E(X) + E(X)^2\\
-&amp;= {E\!\left(X^2\right)} - E(X)^2.\end{align*}\]</p>
-
-</article></slide><slide class=''><hgroup><h2>examples</h2></hgroup><article  id="examples-1" class="build">
-
-<p>\(X \sim \text{Bernoulli}(p)\)&#8230;</p>
-
-<p>\(Z \sim N(0,1)\)&#8230;</p>
-
-<p>\(X \sim \text{Poisson}(\lambda)\)&#8230;(uses a trick!)</p>
-
-<p>Variance of \(X=a\) constant.</p>
-
-<p>Basic examples for exercise: Exponential, Gamma, Geometric (trick: differentiate power series twice), Binomial (use Poisson trick).</p>
-
-</article></slide><slide class=''><hgroup><h2>\({\text{Var}\!\left(a + bX\right)}\), \({\text{Var}\!\left(X + Y\right)}\) (independent case)</h2></hgroup><article  id="textvarlefta-bxright-textvarleftx-yright-independent-case" class="build">
-
-<p>\({\text{Var}\!\left(a + bX\right)} = b^2{\text{Var}\!\left(X\right)}.\) Proof&#8230;</p>
-
-<p>Example: \(X \sim N(\mu, \sigma^2)\)</p>
-
-<p>When \(X \perp Y\), \({\text{Var}\!\left(X+Y\right)}={\text{Var}\!\left(X\right)}+{\text{Var}\!\left(Y\right)}.\) Proof&#8230;</p>
-
-<p>Actually independence is stronger than necessary. Only needed \(E(XY)=E(X)E(Y);\) to be revisited.</p>
-
-</article></slide><slide class=''><hgroup><h2>variance of the &quot;sample average&quot;</h2></hgroup><article  id="variance-of-the-sample-average">
-
-<p>This is a &quot;grand&quot; example of particular importance.</p>
-
-<p>Suppose again \(X_1,\ldots,X_n\) is i.i.d. with \({E\!\left(X_i\right)}=\mu\) and \({\text{Var}\!\left(X_i\right)}=\sigma^2.\). We already know \({E\!\left(\overline X\right)}=\,\mu\).</p>
-
-<p>What about \({\text{Var}\!\left(\overline X\right)}\)?</p></article></slide>
+<p>\(X\sim \text{NegBin}(r,p)\)&#8230;</p></article></slide>
 
 
   <slide class="backdrop"></slide>

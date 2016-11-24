@@ -55,78 +55,14 @@ $$E\left(\overline{X}\right) = E\left(\frac{X_1 + \cdots + X_n}{n}\right)$$
 Theorem (continuous version): $X_1,\ldots,X_n$ have joint density $f(x_1,\ldots,x_n)$ and $Y = g(X_1,\ldots,X_n)$. Then:
 $$E(Y) = \int\ldots\int g(x_1,\ldots,x_n) f(x_1,\ldots,x_n)\,dx_1\ldots\,dx_n$$
 
-## examples
+## examples { .smaller }
 
 Suppose $X_1 \perp X_2.$ Consider $E(X_1\cdot X_2)$...
 
 Exercise: $X_1 \perp X_2.$ Consider $\E{g(X_1)\, h(X_2)}$
 
 Now suppose $X_1,\ldots,X_n$ are i.i.d. with $E(X_i) = \mu.$ Consider:
-$$E\left(\overline{X}\right) = E\left(\frac{X_1 + \cdots + X_n}{n}\right)...$$
+$$E\left(\overline{X}\right) = E\left(\frac{X_1 + \cdots + X_n}{n}\right)=\mu$$
+**Note added after class: Try the proof with $n=2$. Notice that there was nothing special about $n$. Also notice that the only requirement for $E\left(\overline{X}\right) = \mu$ is just that $E(X_i) = \mu$. Try for $n=2$ just with a general joint distribution and no independence and not the same distribution for $X_1$ and $X_2$ and only $E(X_1)=E(X_2) = \mu$**
 
 $X\sim \text{NegBin}(r,p)$...
-
-## putting a number on variation { .build }
-
-Expected value is a measure of "location", but random variables with the same "location" can be quite different.
-
-Consider the coin tossing game with $E(Y)=0$:
-$$P(Y=y) = \begin{cases}
-0.5 &: y=100\\
-0.5 &: y=-100
-\end{cases}$$
-
-One thing leads to another. Family trees are compared and contrasted, and after more than a few *schnapps* things get interesting:
-$$P(Y_2=y) = \begin{cases}
-0.5 &: y=1000\\
-0.5 &: y=-1000
-\end{cases}$$
-Still, $E(Y_2)=0$. But the values of $Y_2$ are more spread out.
-
-## variance
-
-One way to measure spread is to use the *variance* of $X$, defined as: $\V{X}=E\left[(X-E(X))^2\right].$
-
-This is a use of $E(g(X))$ with $g(x) = (x-E(X))^2$. 
-
-Very useful:
-$$\begin{align*}
-\V{X} &= \E{X^2 - 2XE(X) + E(X)^2} \\
-&= \E{X^2} - 2E(X)E(X) + E(X)^2\\
-&= \E{X^2} - E(X)^2.\end{align*}$$
-
-## examples { .build }
-
-$X \sim \text{Bernoulli}(p)$... 
-
-$Z \sim N(0,1)$...
-
-$X \sim \text{Poisson}(\lambda)$...(uses a trick!)
-
-Variance of $X=a$ constant.
-
-Basic examples for exercise: Exponential, Gamma, Geometric (trick: differentiate power series twice), Binomial (use Poisson trick).
-
-## $\V{a + bX}$, $\V{X + Y}$ (independent case) { .build }
-
-$\V{a + bX} = b^2\V{X}.$ Proof...
-
-Example: $X \sim N(\mu, \sigma^2)$
-
-When $X \perp Y$, $\V{X+Y}=\V{X}+\V{Y}.$ Proof...
-
-Actually independence is stronger than necessary. Only needed $E(XY)=E(X)E(Y);$ to be revisited.
-
-## variance of the "sample average"
-
-This is a "grand" example of particular importance. 
-
-Suppose again $X_1,\ldots,X_n$ is i.i.d. with $\E{X_i}=\mu$ and $\V{X_i}=\sigma^2.$. We already know $\E{\overline X}=\,\mu$. 
-
-What about $\V{\overline X}$?
-
-
-
-
-
-
